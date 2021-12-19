@@ -10,8 +10,4 @@ import com.enesyildirim.notes.domain.model.Note
 )
 abstract class NotesDatabase: RoomDatabase() {
     abstract val notesDao: NotesDao
-
-    companion object {
-        const val DATABASE_NAME = "notes_db"
-    }
 }

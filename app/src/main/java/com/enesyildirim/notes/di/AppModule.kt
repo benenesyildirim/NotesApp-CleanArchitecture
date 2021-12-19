@@ -2,6 +2,7 @@ package com.enesyildirim.notes.di
 
 import android.app.Application
 import androidx.room.Room
+import com.enesyildirim.notes.common.Constants.DATABASE_NAME
 import com.enesyildirim.notes.data.db.NotesDatabase
 import com.enesyildirim.notes.data.NotesRepositoryImpl
 import com.enesyildirim.notes.domain.repository.NotesRepository
@@ -22,7 +23,7 @@ object AppModule {
         return Room.databaseBuilder(
             app,
             NotesDatabase::class.java,
-            NotesDatabase.DATABASE_NAME
+            DATABASE_NAME
         ).build()
     }
 
